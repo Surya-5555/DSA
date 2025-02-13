@@ -32,7 +32,7 @@ class Solution {
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-26. Remove Duplicates from Sorted Array
+26. Remove Duplicates from Sorted Array(LeetCode)
 class Solution {
     public:
         int removeDuplicates(vector<int> &nums) {
@@ -48,5 +48,15 @@ class Solution {
     };
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+189. Rotate Array(LeetCode)
 
-
+class Solution {
+    public:
+        void rotate(vector<int>& nums, int k) {
+        int n=nums.size();
+        k=k%n;
+        reverse(nums.begin(),nums.begin()+(n-k));
+        reverse(nums.begin()+(n-k),nums.end());
+        reverse(nums.begin(),nums.end());
+        }
+    };
